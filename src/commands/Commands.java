@@ -41,8 +41,9 @@ public class Commands {
     		if (args.length == 3) {
     			dir = new File(args[2]);    			
     		} else {
-    			// by default: user folder / git / stata
+    			// by default: user folder / Documents / git / stata
     			dir = new File(System.getProperty("user.home"));
+    			dir = new File(dir, "Documents");
     			dir = new File(dir, "git");
     			dir = new File(dir, "stata");
     		}
